@@ -35,7 +35,8 @@ const ThreeGlobeComponent = React.forwardRef<
     }
   }, [ref]);
 
-  return <group ref={objectRef} />; // FIXED: Changed object3D to group
+  // Using div as a fallback outside of Canvas context
+  return <primitive object={new Object3D()} ref={objectRef} />;
 });
 
 ThreeGlobeComponent.displayName = "ThreeGlobeComponent";
