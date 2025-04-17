@@ -19,8 +19,12 @@ import countries from "../../../data/globe.json";
 extend({ ThreeGlobe });
 
 // Create a component that properly integrates with R3F
-function GlobeObject({ forwardedRef }) {
-  const groupRef = useRef();
+function GlobeObject({
+  forwardedRef,
+}: {
+  forwardedRef?: React.RefObject<ThreeGlobe>;
+}) {
+  const groupRef = useRef<Group>(null!);
 
   useEffect(() => {
     if (groupRef.current) {
@@ -101,19 +105,18 @@ interface WorldProps {
   data: Position[];
 }
 
-let numbersOfRings = [0];
+let numbersOfRings: number[] = [0];
 
 export function Globe({ globeConfig, data }: WorldProps) {
-  const [globeData, setGlobeData] = useState<
-    | {
-        size: number;
-        order: number;
-        color: (t: number) => string;
-        lat: number;
-        lng: number;
-      }[]
-    | null
-  >(null);
+  type GlobeDataPoint = {
+    size: number;
+    order: number;
+    color: (t: number) => string;
+    lat: number;
+    lng: number;
+  };
+
+  const [globeData, setGlobeData] = useState<GlobeDataPoint[] | null>(null);
 
   const globeRef = useRef<ThreeGlobe | null>(null);
 
@@ -158,7 +161,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
 
   const _buildData = () => {
     const arcs = data;
-    let points = [];
+    let points: GlobeDataPoint[] = [];
     for (let i = 0; i < arcs.length; i++) {
       const arc = arcs[i];
       const rgb = hexToRgb(arc.color) as { r: number; g: number; b: number };
@@ -183,7 +186,9 @@ export function Globe({ globeConfig, data }: WorldProps) {
       (v, i, a) =>
         a.findIndex((v2) =>
           ["lat", "lng"].every(
-            (k) => v2[k as "lat" | "lng"] === v[k as "lat" | "lng"]
+            (k) =>
+              v2[k as keyof Pick<GlobeDataPoint, "lat" | "lng">] ===
+              v[k as keyof Pick<GlobeDataPoint, "lat" | "lng">]
           )
         ) === i
     );
@@ -200,7 +205,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
         .showAtmosphere(defaultProps.showAtmosphere)
         .atmosphereColor(defaultProps.atmosphereColor)
         .atmosphereAltitude(defaultProps.atmosphereAltitude)
-        .hexPolygonColor((e) => {
+        .hexPolygonColor((e: any) => {
           return defaultProps.polygonColor;
         });
       startAnimation();
@@ -212,25 +217,25 @@ export function Globe({ globeConfig, data }: WorldProps) {
 
     globeRef.current
       .arcsData(data)
-      .arcStartLat((d) => (d as { startLat: number }).startLat * 1)
-      .arcStartLng((d) => (d as { startLng: number }).startLng * 1)
-      .arcEndLat((d) => (d as { endLat: number }).endLat * 1)
-      .arcEndLng((d) => (d as { endLng: number }).endLng * 1)
+      .arcStartLat((d: any) => (d as { startLat: number }).startLat * 1)
+      .arcStartLng((d: any) => (d as { startLng: number }).startLng * 1)
+      .arcEndLat((d: any) => (d as { endLat: number }).endLat * 1)
+      .arcEndLng((d: any) => (d as { endLng: number }).endLng * 1)
       .arcColor((e: any) => (e as { color: string }).color)
-      .arcAltitude((e) => {
+      .arcAltitude((e: any) => {
         return (e as { arcAlt: number }).arcAlt * 1;
       })
-      .arcStroke((e) => {
+      .arcStroke((e: any) => {
         return [0.32, 0.28, 0.3][Math.round(Math.random() * 2)];
       })
       .arcDashLength(defaultProps.arcLength)
-      .arcDashInitialGap((e) => (e as { order: number }).order * 1)
+      .arcDashInitialGap((e: any) => (e as { order: number }).order * 1)
       .arcDashGap(15)
-      .arcDashAnimateTime((e) => defaultProps.arcTime);
+      .arcDashAnimateTime((e: any) => defaultProps.arcTime);
 
     globeRef.current
       .pointsData(data)
-      .pointColor((e) => (e as { color: string }).color)
+      .pointColor((e: any) => (e as { color: string }).color)
       .pointsMerge(true)
       .pointAltitude(0.0)
       .pointRadius(2);
@@ -337,8 +342,12 @@ export function hexToRgb(hex: string) {
     : null;
 }
 
-export function genRandomNumbers(min: number, max: number, count: number) {
-  const arr = [];
+export function genRandomNumbers(
+  min: number,
+  max: number,
+  count: number
+): number[] {
+  const arr: number[] = [];
   while (arr.length < count) {
     const r = Math.floor(Math.random() * (max - min)) + min;
     if (arr.indexOf(r) === -1) arr.push(r);
