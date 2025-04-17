@@ -11,7 +11,7 @@ import countries from "../../../data/globe.json";
 extend({ ThreeGlobe });
 
 // Type definition for the ThreeGlobe component
-type ThreeGlobeComponentProps = JSX.IntrinsicAttributes & {
+type ThreeGlobeComponentProps = {
   ref?: React.RefObject<ThreeGlobe>;
 };
 
@@ -35,7 +35,7 @@ const ThreeGlobeComponent = React.forwardRef<
     }
   }, [ref]);
 
-  return <object3D ref={objectRef} {...props} />;
+  return <object3D ref={objectRef} />;
 });
 
 ThreeGlobeComponent.displayName = "ThreeGlobeComponent";
