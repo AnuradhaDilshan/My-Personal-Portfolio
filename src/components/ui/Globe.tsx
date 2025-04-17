@@ -18,47 +18,32 @@ import countries from "../../../data/globe.json";
 // Extend Three with ThreeGlobe
 extend({ ThreeGlobe });
 
-// Define the Object3D component props type
-type Object3DProps = {
-  ref?: React.Ref<Object3D>;
-  children?: React.ReactNode;
-};
-
-// Create a wrapper component for Object3D
-const Object3DComponent = React.forwardRef<Object3D, Object3DProps>(
-  (props, ref) => {
-    return <group ref={ref}>{props.children}</group>;
-  }
-);
-
-Object3DComponent.displayName = "Object3DComponent";
-
 // Create a component that properly integrates with R3F
 function GlobeObject({
   forwardedRef,
 }: {
   forwardedRef?: React.RefObject<ThreeGlobe>;
 }) {
-  const groupRef = useRef<Group>(null!);
+  const [group] = useState(() => new Group());
 
   useEffect(() => {
-    if (groupRef.current) {
+    if (group) {
       const globe = new ThreeGlobe();
       // Clear existing children if any
-      while (groupRef.current.children.length) {
-        groupRef.current.remove(groupRef.current.children[0]);
+      while (group.children.length) {
+        group.remove(group.children[0]);
       }
-      groupRef.current.add(globe);
+      group.add(globe);
 
       // Forward the reference
       if (forwardedRef) {
         forwardedRef.current = globe;
       }
     }
-  }, [forwardedRef]);
+  }, [group, forwardedRef]);
 
-  // Use the proper group component
-  return <group ref={groupRef} />;
+  // Create group directly in code without JSX
+  return <primitive object={group} />;
 }
 
 // Type definition for the ThreeGlobe component
