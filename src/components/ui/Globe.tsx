@@ -5,13 +5,15 @@ import ThreeGlobe from "three-globe";
 import { useThree, Object3DNode, Canvas, extend } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import countries from "../../../data/globe.json";
-declare module "@react-three/fiber" {
-  interface IntrinsicElements {
-    threeGlobe: Object3DNode<ThreeGlobe, typeof ThreeGlobe>;
+extend({ ThreeGlobe });
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      threeGlobe: Object3DNode<ThreeGlobe, typeof ThreeGlobe>;
+    }
   }
 }
-
-extend({ ThreeGlobe });
 
 const RING_PROPAGATION_SPEED = 3;
 const aspect = 1.2;
