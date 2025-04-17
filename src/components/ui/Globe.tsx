@@ -42,7 +42,8 @@ function GlobeObject({
     }
   }, [forwardedRef]);
 
-  return <group ref={groupRef} />;
+  // Fix: Use proper typing for R3F components
+  return <primitive object={new Group()} ref={groupRef} />;
 }
 
 // Type definition for the ThreeGlobe component
