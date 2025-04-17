@@ -1,14 +1,45 @@
 "use client";
 import * as React from "react";
 import { useEffect, useRef, useState } from "react";
-import { Color, Scene, Fog, PerspectiveCamera, Vector3, Object3D } from "three";
+import {
+  Color,
+  Scene,
+  Fog,
+  PerspectiveCamera,
+  Vector3,
+  Object3D,
+  Group,
+} from "three";
 import ThreeGlobe from "three-globe";
-import { useThree, Canvas, extend } from "@react-three/fiber";
+import { useThree, Canvas, extend, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import countries from "../../../data/globe.json";
 
 // Extend Three with ThreeGlobe
 extend({ ThreeGlobe });
+
+// Create a component that properly integrates with R3F
+function GlobeObject({ forwardedRef }) {
+  const groupRef = useRef();
+
+  useEffect(() => {
+    if (groupRef.current) {
+      const globe = new ThreeGlobe();
+      // Clear existing children if any
+      while (groupRef.current.children.length) {
+        groupRef.current.remove(groupRef.current.children[0]);
+      }
+      groupRef.current.add(globe);
+
+      // Forward the reference
+      if (forwardedRef) {
+        forwardedRef.current = globe;
+      }
+    }
+  }, [forwardedRef]);
+
+  return <group ref={groupRef} />;
+}
 
 // Type definition for the ThreeGlobe component
 type ThreeGlobeComponentProps = {
@@ -20,23 +51,7 @@ const ThreeGlobeComponent = React.forwardRef<
   ThreeGlobe,
   ThreeGlobeComponentProps
 >((props, ref) => {
-  const objectRef = useRef<Object3D>(null);
-
-  useEffect(() => {
-    if (objectRef.current) {
-      const globe = new ThreeGlobe();
-      objectRef.current.clear();
-      objectRef.current.add(globe);
-
-      // Forward the ref
-      if (ref && "current" in ref) {
-        ref.current = globe;
-      }
-    }
-  }, [ref]);
-
-  // Using div as a fallback outside of Canvas context
-  return <primitive object={new Object3D()} ref={objectRef} />;
+  return <GlobeObject forwardedRef={ref} />;
 });
 
 ThreeGlobeComponent.displayName = "ThreeGlobeComponent";
