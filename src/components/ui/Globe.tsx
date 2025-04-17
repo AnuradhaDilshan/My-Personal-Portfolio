@@ -18,19 +18,20 @@ import countries from "../../../data/globe.json";
 // Extend Three with ThreeGlobe
 extend({ ThreeGlobe });
 
-// Custom Group component with proper TypeScript typing
-type GroupProps = {
-  ref?: React.Ref<Group>;
+// Define the Object3D component props type
+type Object3DProps = {
+  ref?: React.Ref<Object3D>;
   children?: React.ReactNode;
 };
 
-const GroupComponent = React.forwardRef<Group, GroupProps>((props, ref) => {
-  return (
-    <object3D ref={ref as React.RefObject<Object3D>}>{props.children}</object3D>
-  );
-});
+// Create a wrapper component for Object3D
+const Object3DComponent = React.forwardRef<Object3D, Object3DProps>(
+  (props, ref) => {
+    return <group ref={ref}>{props.children}</group>;
+  }
+);
 
-GroupComponent.displayName = "GroupComponent";
+Object3DComponent.displayName = "Object3DComponent";
 
 // Create a component that properly integrates with R3F
 function GlobeObject({
@@ -56,8 +57,8 @@ function GlobeObject({
     }
   }, [forwardedRef]);
 
-  // Use our custom GroupComponent instead of <group>
-  return <GroupComponent ref={groupRef} />;
+  // Use the proper group component
+  return <group ref={groupRef} />;
 }
 
 // Type definition for the ThreeGlobe component
