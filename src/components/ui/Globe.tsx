@@ -1,17 +1,17 @@
 "use client";
-import * as React from "react";
 import { useEffect, useRef, useState } from "react";
 import { Color, Scene, Fog, PerspectiveCamera, Vector3 } from "three";
 import ThreeGlobe from "three-globe";
 import { useThree, Object3DNode, Canvas, extend } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import countries from "../../../data/globe.json";
+
 extend({ ThreeGlobe });
 
 declare global {
   namespace JSX {
     interface IntrinsicElements {
-      threeGlobe: Object3DNode<ThreeGlobe, typeof ThreeGlobe>;
+      threeGlobe: React.PropsWithRef<ThreeGlobe>;
     }
   }
 }
@@ -228,7 +228,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
 
   return (
     <>
-      <threeGlobe ref={globeRef} />
+      <primitive object={new ThreeGlobe()} ref={globeRef} />
     </>
   );
 }
