@@ -35,7 +35,7 @@ const ThreeGlobeComponent = React.forwardRef<
     }
   }, [ref]);
 
-  return <object3D ref={objectRef} />;
+  return <group ref={objectRef} />; // FIXED: Changed object3D to group
 });
 
 ThreeGlobeComponent.displayName = "ThreeGlobeComponent";
