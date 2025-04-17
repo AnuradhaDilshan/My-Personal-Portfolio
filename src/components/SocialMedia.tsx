@@ -5,7 +5,7 @@ interface SocialMediaProps {
 }
 
 const SocialMedia: React.FC<SocialMediaProps> = ({ filterIds }) => {
-  const dimensions = {
+  const dimensions: { [key: number]: { width: number; height: number } } = {
     1: { width: 24, height: 24 },
     2: { width: 18, height: 18 },
     3: { width: 19, height: 19 },
@@ -16,26 +16,28 @@ const SocialMedia: React.FC<SocialMediaProps> = ({ filterIds }) => {
   };
 
   const filteredSocialMedia = filterIds
-    ? filterIds.map((id) => socialMedia.find((info) => info.id === id))
+    ? filterIds
+        .map((id) => socialMedia.find((info) => info.id === id))
+        .filter(Boolean)
     : socialMedia;
 
   return (
     <div className="flex items-center md:gap-3 gap-6">
       {filteredSocialMedia.map((info) => {
-        const { width, height } = dimensions[info.id] || {
+        const { width, height } = dimensions[info!.id] || {
           width: 16,
           height: 16,
         };
 
         return (
           <a
-            key={info.id}
-            href={info.link}
+            key={info!.id}
+            href={info!.link}
             target="_blank"
             rel="noopener noreferrer"
             className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
           >
-            <img src={info.img} alt="icons" width={width} height={height} />
+            <img src={info!.img} alt="icon" width={width} height={height} />
           </a>
         );
       })}
