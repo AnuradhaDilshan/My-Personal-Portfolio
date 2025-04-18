@@ -1,17 +1,15 @@
 "use client";
 import * as React from "react";
 import { useEffect, useRef, useState } from "react";
-import {
-  Color,
-  Scene,
-  Fog,
-  PerspectiveCamera,
-  Vector3,
-  Object3D,
-  Group,
-} from "three";
+import { Color, Scene, Fog, PerspectiveCamera, Vector3, Group } from "three";
 import ThreeGlobe from "three-globe";
-import { useThree, Canvas, extend, useFrame } from "@react-three/fiber";
+import {
+  useThree,
+  Canvas,
+  extend,
+  useFrame,
+  Object3D,
+} from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import countries from "../../../data/globe.json";
 
