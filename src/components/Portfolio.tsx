@@ -20,10 +20,7 @@ const Portfolio = () => {
               className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw] relative -mb-20"
               key={item.id}
             >
-              <PinContainer
-                title="/ui.aceternity.com"
-                href="https://twitter.com/mannupaaji"
-              >
+              <PinContainer title="/ui.aceternity.com">
                 <Link href={`/projects/${slug}`}>
                   <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-7 img-zoom-container">
                     <div
