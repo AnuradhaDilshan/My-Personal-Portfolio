@@ -5,6 +5,10 @@ import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const Home = () => {
+  const socialMediaIds = [5, 7, 4, 6];
+  const baseDelay = 2500;
+  const intervalDelay = 600;
+
   return (
     <div id="home" className="pb-20 pt-36">
       {/* Spotlight */}
@@ -27,12 +31,12 @@ const Home = () => {
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 
-          <p className="text-center md:tracking-wider mb-8 text-sm md:text-lg lg:text-2xl">
+          <p className="text-center md:tracking-wider mb-8 text-sm md:text-lg lg:text-2xl fade-in animation-delay-0">
             Full Stack Developer <span className="text-xl"> | </span> Blockchain
             Enthusiast
           </p>
 
-          <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-170">
+          <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-170 fade-in animation-delay-200">
             &quot;Final year IT undergraduate at KDU, specializing in full-stack
             development and crafting innovative tech solutions through hands-on
             project experience.&quot;
@@ -42,7 +46,7 @@ const Home = () => {
             href="https://drive.google.com/file/d/1qwg6aAE1lgVxmpBklNHLWAxNkKgHbtKg/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-1"
+            className="mt-1 fade-in animation-delay-600"
           >
             <MagicButton
               title="My Resume"
@@ -51,7 +55,20 @@ const Home = () => {
             />
           </a>
           <div className="flex items-center justify-center mt-9 md:gap-3 gap-6">
-            <SocialMedia filterIds={[5, 7, 4, 6]} />
+            {socialMediaIds.map((id, index) => (
+              <div
+                key={id}
+                className={`zoom-in`}
+                style={{
+                  animationDelay: `${baseDelay + index * intervalDelay}ms`,
+                  animationDuration: "1s",
+                  animationFillMode: "forwards",
+                  opacity: 0,
+                }}
+              >
+                <SocialMedia filterIds={[id]} />
+              </div>
+            ))}
           </div>
         </div>
       </div>
