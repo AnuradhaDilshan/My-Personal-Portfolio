@@ -104,8 +104,8 @@ export const projects = [
       "/assets/skills/next.svg",
       "/assets/skills/tailwind.svg",
       "/assets/skills/framer.svg",
-      "/assets/skills/motion.png",
-      "/assets/skills/aceternity.png",
+      "/assets/skills/motion.webp",
+      "/assets/skills/aceternity.webp",
     ],
   },
   {
@@ -125,14 +125,14 @@ export const projects = [
     id: 5,
     title: "KDU Club Management System",
     des: "To manage KDU club memberships, events, and communications, designed to simplify administrative tasks and enhance member engagement.",
-    img: "/assets/works/p5.png",
+    img: "/assets/works/p5.webp",
     iconLists: ["/assets/skills/c-sharp.svg", "/assets/skills/mysql.svg"],
   },
   {
     id: 6,
     title: "Travel Tour Website",
     des: "A seamless travel tour website offering tour packages, booking options, and detailed itineraries to make planning your next getaway simple and exciting.",
-    img: "/assets/works/p6.png",
+    img: "/assets/works/p6.webp",
     iconLists: ["/assets/skills/react.svg", "/assets/skills/sass.svg"],
   },
 ];
@@ -152,7 +152,7 @@ export const project_data = [
     ],
     visit: [
       {
-        icon: "/assets/visit/github_logo.png",
+        icon: "/assets/visit/github_logo.webp",
         link: "https://github.com/AnuradhaDilshan/Driving-School-Management-System",
       },
       { icon: "/assets/visit/google_docs.png", link: "https:/www.google.com" },
@@ -178,7 +178,7 @@ export const project_data = [
     ],
     visit: [
       {
-        icon: "/assets/visit/github_logo.png",
+        icon: "/assets/visit/github_logo.webp",
         link: "https://github.com/AnuradhaDilshan/LRDC-Boat-Reservation-System",
       },
     ],
@@ -196,12 +196,12 @@ export const project_data = [
       { icon: "/assets/skills/next.svg", name: "Next.js" },
       { icon: "/assets/skills/tailwind.svg", name: "Tailwind CSS" },
       { icon: "/assets/skills/framer.svg", name: "Framer" },
-      { icon: "/assets/skills/motion.png", name: "Motion" },
-      { icon: "/assets/skills/aceternity.png", name: "Aceternity UI" },
+      { icon: "/assets/skills/motion.webp", name: "Motion" },
+      { icon: "/assets/skills/aceternity.webp", name: "Aceternity UI" },
     ],
     visit: [
       {
-        icon: "/assets/visit/github_logo.png",
+        icon: "/assets/visit/github_logo.webp",
         link: "https://github.com/AnuradhaDilshan/My-Personal-Portfolio",
       },
     ],
@@ -223,7 +223,7 @@ export const project_data = [
     ],
     visit: [
       {
-        icon: "/assets/visit/github_logo.png",
+        icon: "/assets/visit/github_logo.webp",
         link: "https://github.com/AnuradhaDilshan/Inventory-Management-System",
       },
       { icon: "/assets/visit/google_docs.png", link: "https:/www.google.com" },
@@ -240,14 +240,14 @@ export const project_data = [
     id: 5,
     title: "KDU Club Management System",
     des: "To manage KDU club memberships, events, and communications, designed to simplify administrative tasks and enhance member engagement. Built using C-Sharp and MySQL, this desktop-based application simplifies club administration by automating processes and this system supports efficient club operations in academic environments.",
-    img: "/assets/works/p5.png",
+    img: "/assets/works/p5.webp",
     iconLists: [
       { icon: "/assets/skills/c-sharp.svg", name: "C-Sharp" },
       { icon: "/assets/skills/mysql.svg", name: "MySQL" },
     ],
     visit: [
       {
-        icon: "/assets/visit/github_logo.png",
+        icon: "/assets/visit/github_logo.webp",
         link: "https://github.com/AnuradhaDilshan/KDU-Club-Management-System",
       },
       { icon: "/assets/visit/google_docs.png", link: "https:/www.google.com" },
@@ -264,14 +264,14 @@ export const project_data = [
     id: 6,
     title: "Travel Tour Website",
     des: "A seamless travel tour website offering tour packages, booking options, and detailed itineraries to make planning your next getaway simple and exciting. Developed using React.js and styled with SASS, this web application enables users to explore curated tour packages, view detailed itineraries, and complete bookings through a clean and intuitive interface. The site features dynamic routing, interactive UI components, and modular architecture for easy scalability. also, Tour package listing with filterable categories. (e.g., destination, price range, duration)",
-    img: "/assets/works/p6.png",
+    img: "/assets/works/p6.webp",
     iconLists: [
       { icon: "/assets/skills/react.svg", name: "React" },
       { icon: "/assets/skills/sass.svg", name: "Sass" },
     ],
     visit: [
       {
-        icon: "/assets/visit/github_logo.png",
+        icon: "/assets/visit/github_logo.webp",
         link: "https://github.com/AnuradhaDilshan/Travel-Tour-Website",
       },
       { icon: "/assets/visit/google_docs.png", link: "https:/www.google.com" },
@@ -280,7 +280,7 @@ export const project_data = [
         link: "https:/www.google.com",
       },
     ],
-    image: "/assets/works/p6_full.png",
+    image: "/assets/works/p6_full.webp",
     readme:
       "https://github.com/AnuradhaDilshan/Travel-Tour-Website/blob/main/README.md",
   },

@@ -38,7 +38,7 @@ const Page404 = () => {
           <div className="flex justify-center relative">
             <div className="flex flex-col items-center justify-center">
               <img
-                src="/assets/elements/404error.png"
+                src="/assets/elements/404error.webp"
                 alt="404 Error"
                 className="max-w-[40vw] md:max-w-[30vw] lg:max-w-[20vw] flex flex-col items-center justify-center"
               />
