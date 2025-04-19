@@ -75,7 +75,7 @@ export const projects = [
     id: 1,
     title: "Driving School Management System",
     des: "Manage Driving Schools with ease using this full-featured Web Application built on the MERN Stack. Driving School Management System that handles registrations, lesson scheduling, instructor allocation, and payment tracking with an intuitive UI.",
-    img: "/assets/works/p1.webp",
+    img: "/assets/works/p1.png",
     iconLists: [
       "/assets/skills/react.svg",
       "/assets/skills/express.svg",
@@ -88,7 +88,7 @@ export const projects = [
     id: 2,
     title: "LRDC Boat Reservation System",
     des: "Effortlessly book and manage boat rides with streamlined reservation system built for LRDC Services (Pvt) Limited. Designed for smooth scheduling, availability tracking, and user-friendly booking.",
-    img: "/assets/works/p2.webp",
+    img: "/assets/works/p2.png",
     iconLists: [
       "/assets/skills/react.svg",
       "/assets/skills/bootstrap.svg",
@@ -99,7 +99,7 @@ export const projects = [
     id: 3,
     title: "My Personal Portfolio",
     des: "A Modern, Responsive Portfolio Website designed to showcase My Projects, Skills, and Experience. Built to reflect my passion for clean design and efficient development.",
-    img: "/assets/works/p3.webp",
+    img: "/assets/works/p3.png",
     iconLists: [
       "/assets/skills/next.svg",
       "/assets/skills/tailwind.svg",
@@ -142,7 +142,7 @@ export const project_data = [
     id: 1,
     title: "Driving School Management System",
     des: "Manage driving schools with ease using this full-featured web application built on the MERN stack. The system handles student registrations, lesson scheduling, instructor allocation, and payment tracking. It includes role-based access control for secure authorization, real-time notifications, and an intuitive interface tailored for admins, instructors, and students alike.",
-    img: "/assets/works/p1.webp",
+    img: "/assets/works/p1.png",
     iconLists: [
       { icon: "/assets/skills/react.svg", name: "React" },
       { icon: "/assets/skills/express.svg", name: "Express" },
@@ -161,8 +161,8 @@ export const project_data = [
         link: "https:/www.google.com",
       },
     ],
-    image: "/assets/works/p1_full.webp",
-    image_ui: "/assets/works/p1_ui.webp",
+    image: "/assets/works/p1_full.png",
+    image_ui: "/assets/works/p1_ui.png",
     readme:
       "https://github.com/AnuradhaDilshan/Driving-School-Management-System/blob/main/README.md",
   },
@@ -170,7 +170,7 @@ export const project_data = [
     id: 2,
     title: "LRDC Boat Reservation System",
     des: "Effortlessly book and manage boat rides with streamlined reservation system built for LRDC Services (Pvt) Limited. This web-based application was developed to digitize and optimize the boat ride booking process. Designed for smooth scheduling, availability tracking, and user-friendly booking. The system features are conflict-free booking calendar and dynamic ride slot management.",
-    img: "/assets/works/p2.webp",
+    img: "/assets/works/p2.png",
     iconLists: [
       { icon: "/assets/skills/react.svg", name: "React" },
       { icon: "/assets/skills/bootstrap.svg", name: "Bootstrap" },
@@ -182,8 +182,8 @@ export const project_data = [
         link: "https://github.com/AnuradhaDilshan/LRDC-Boat-Reservation-System",
       },
     ],
-    image: "/assets/works/p2_full.webp",
-    image_ui: "/assets/works/p2_ui.webp",
+    image: "/assets/works/p2_full.png",
+    image_ui: "/assets/works/p2_ui.png",
     readme:
       "https://github.com/AnuradhaDilshan/LRDC-Boat-Reservation-System/blob/main/README.md",
   },
@@ -191,7 +191,7 @@ export const project_data = [
     id: 3,
     title: "My Personal Portfolio",
     des: "A Modern, Responsive Portfolio Website designed to showcase My Projects, Skills, and Experience. Built to reflect my passion for clean design and efficient development. Built with Next.js and Tailwind CSS, the site reflects my passion for clean UI/UX, modular component-based architecture, and efficient front-end development. It includes sections for my education, featured projects, a dynamic tech stack, and contact. All animated UI components and motions optimized for ehnanced performance and accessibility.",
-    img: "/assets/works/p3.webp",
+    img: "/assets/works/p3.png",
     iconLists: [
       { icon: "/assets/skills/next.svg", name: "Next.js" },
       { icon: "/assets/skills/tailwind.svg", name: "Tailwind CSS" },
@@ -205,7 +205,6 @@ export const project_data = [
         link: "https://github.com/AnuradhaDilshan/My-Personal-Portfolio",
       },
     ],
-    image: "/assets/works/p3_full.webp",
     readme:
       "https://github.com/AnuradhaDilshan/My-Personal-Portfolio/blob/main/README.md",
   },
@@ -232,7 +231,6 @@ export const project_data = [
         link: "https:/www.google.com",
       },
     ],
-    image: "/assets/works/p4_ui.png",
     readme:
       "https://github.com/AnuradhaDilshan/Inventory-Management-System/blob/main/README.md",
   },
@@ -256,7 +254,6 @@ export const project_data = [
         link: "https:/www.google.com",
       },
     ],
-    image: "/assets/works/p5_full.png",
     readme:
       "https://github.com/AnuradhaDilshan/KDU-Club-Management-System/blob/main/README.md",
   },
@@ -280,7 +277,6 @@ export const project_data = [
         link: "https:/www.google.com",
       },
     ],
-    image: "/assets/works/p6_full.png",
     readme:
       "https://github.com/AnuradhaDilshan/Travel-Tour-Website/blob/main/README.md",
   },
