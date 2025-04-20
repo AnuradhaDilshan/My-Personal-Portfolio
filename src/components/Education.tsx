@@ -44,7 +44,7 @@ const Education = () => {
         My <span className="text-purple-500">Education</span> Journey
       </h1>
       <EduGrid items={educationItems} className="max-w-4xl mx-auto" />
-      <TracingBeam className="px-1" />
+      <TracingBeam className="px-1 hidden md:block" />
     </div>
   );
 };

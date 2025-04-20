@@ -22,7 +22,7 @@ export const EduGrid = ({
           key={index}
           className={cn(
             "relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-18",
-            item.id === 2 && "translate-x-121"
+            item.id === 2 && "md:translate-x-121"
           )}
         >
           {/* Render EduGridItem */}
@@ -36,7 +36,8 @@ export const EduGrid = ({
           <div
             className={cn(
               "absolute top-10 right-32.5 flex items-center justify-center h-full w-1/2",
-              item.id === 2 && "-translate-x-168"
+              item.id === 2 && "-translate-x-168",
+              "invisible md:visible"
             )}
           >
             <div className="w-30 h-6 rounded-full bg-purple-700 flex items-center justify-center text-white text-sm font-semibold">

@@ -100,7 +100,7 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            className="w-[40vw] max-w-full relative rounded-4xl border border-b-0 flex-shrink-0 border-slate-800 p-10 md:p-10 md:w-[50vw] flex items-center gap-6"
+            className="w-[80vw] md:w-[60vw] lg:w-[50vw] max-w-full relative rounded-4xl border border-b-0 flex-shrink-0 border-slate-800 p-10 md:p-10 md:w-[50vw] flex items-center gap-6"
             style={{
               background: "rgb(4,7,29)",
               backgroundColor:
@@ -118,16 +118,16 @@ export const InfiniteMovingCards = ({
               <img
                 src={item.image}
                 alt={item.quote}
-                className="w-[18vw] object-cover rounded-xl border border-slate-700"
+                className="w-[25vw] md:w-[20vw] lg:w-[18vw] object-cover rounded-xl border border-slate-700"
               />
 
               {/* Details */}
               <div className="flex flex-col justify-center gap-1">
                 <h3 className="text-white text-xl font-bold">{item.quote}</h3>
-                <p className="text-white-200 text-xs">
+                <p className="text-white-200 text-xs md:text-sm">
                   {formatDate(item.name)}
                 </p>
-                <span className="text-purple-400 font-bold text-sm">
+                <span className="text-purple-400 font-bold text-sm md:text-base">
                   {item.title}
                 </span>
               </div>
