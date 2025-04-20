@@ -155,10 +155,13 @@ export const project_data = [
         icon: "/assets/visit/github_logo.webp",
         link: "https://github.com/AnuradhaDilshan/Driving-School-Management-System",
       },
-      { icon: "/assets/visit/google_docs.png", link: "https:/www.google.com" },
+      {
+        icon: "/assets/visit/google_docs.png",
+        link: "https://drive.google.com/file/d/1HTx6pLnJG6MtOwGaa--fWADw08AAsTAo/view?usp=sharing",
+      },
       {
         icon: "/assets/visit/google_slides.png",
-        link: "https:/www.google.com",
+        link: "https://docs.google.com/presentation/d/1WQ21lvk6R1VBgfG3lwma_HxHUQaBe8qk/edit?usp=sharing&ouid=101283756675475562688&rtpof=true&sd=true",
       },
     ],
     image: "/assets/works/p1_full.webp",
@@ -226,11 +229,6 @@ export const project_data = [
         icon: "/assets/visit/github_logo.webp",
         link: "https://github.com/AnuradhaDilshan/Inventory-Management-System",
       },
-      { icon: "/assets/visit/google_docs.png", link: "https:/www.google.com" },
-      {
-        icon: "/assets/visit/google_slides.png",
-        link: "https:/www.google.com",
-      },
     ],
     image: "/assets/works/p4_ui.png",
     readme:
@@ -250,10 +248,9 @@ export const project_data = [
         icon: "/assets/visit/github_logo.webp",
         link: "https://github.com/AnuradhaDilshan/KDU-Club-Management-System",
       },
-      { icon: "/assets/visit/google_docs.png", link: "https:/www.google.com" },
       {
-        icon: "/assets/visit/google_slides.png",
-        link: "https:/www.google.com",
+        icon: "/assets/visit/google_docs.png",
+        link: "https://drive.google.com/file/d/1ejwK8d89vuaF8L6FgUPcaGRV2Mvp36wc/view?usp=sharing",
       },
     ],
     image: "/assets/works/p5_full.png",
@@ -273,11 +270,6 @@ export const project_data = [
       {
         icon: "/assets/visit/github_logo.webp",
         link: "https://github.com/AnuradhaDilshan/Travel-Tour-Website",
-      },
-      { icon: "/assets/visit/google_docs.png", link: "https:/www.google.com" },
-      {
-        icon: "/assets/visit/google_slides.png",
-        link: "https:/www.google.com",
       },
     ],
     image: "/assets/works/p6_full.webp",
