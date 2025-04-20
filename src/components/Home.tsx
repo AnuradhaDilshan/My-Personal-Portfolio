@@ -6,6 +6,7 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const Home = () => {
   const socialMediaIds = [5, 7, 4, 6];
+  const optionDelay = 2000;
   const baseDelay = 2500;
   const intervalDelay = 400;
 
@@ -31,12 +32,24 @@ const Home = () => {
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 
-          <p className="text-center md:tracking-wider mb-8 text-sm md:text-lg lg:text-2xl fade-in animation-delay-0">
+          <p
+            className="text-center md:tracking-wider mb-8 text-sm md:text-lg lg:text-2xl fade-in animation-delay-0"
+            style={{
+              animationDelay: `${optionDelay}ms`,
+              opacity: 0,
+            }}
+          >
             Full Stack Developer <span className="text-xl"> | </span> Blockchain
             Enthusiast
           </p>
 
-          <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-170 fade-in animation-delay-200">
+          <p
+            className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-170 fade-in animation-delay-200"
+            style={{
+              animationDelay: `${optionDelay}ms`,
+              opacity: 0,
+            }}
+          >
             &quot;Final year IT undergraduate at KDU, specializing in full-stack
             development and crafting innovative tech solutions through hands-on
             project experience.&quot;
@@ -47,6 +60,10 @@ const Home = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="mt-1 fade-in animation-delay-600"
+            style={{
+              animationDelay: `${optionDelay}ms`,
+              opacity: 0,
+            }}
           >
             <MagicButton
               title="My Resume"
