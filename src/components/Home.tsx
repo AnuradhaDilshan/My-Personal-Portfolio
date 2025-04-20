@@ -6,7 +6,7 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const Home = () => {
   const socialMediaIds = [5, 7, 4, 6];
-  const optionDelay = 2000;
+  const optionDelay = 1500;
   const baseDelay = 2500;
   const intervalDelay = 400;
 
