@@ -1,3 +1,5 @@
+import React from "react";
+
 import { softwares, workExperience } from "../../data/index";
 import { Button } from "./ui/MovingBorders";
 

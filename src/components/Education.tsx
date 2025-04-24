@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { EduGrid } from "./ui/EduGrid";
 import { TracingBeam } from "./ui/TracingBeam";
