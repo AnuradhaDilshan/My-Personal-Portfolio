@@ -39,7 +39,7 @@ const Home = () => {
               opacity: 0,
             }}
           >
-            Full Stack Developer <span className="text-xl"> | </span> Blockchain
+            Full Stack Developer <span className="text-xl"> | </span> Tech
             Enthusiast
           </p>
 
