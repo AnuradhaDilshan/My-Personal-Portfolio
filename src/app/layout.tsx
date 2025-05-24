@@ -9,9 +9,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Anuradha Dilshan | Full Stack Developer | Portfolio",
+  title: "Anuradha Dilshan | Aspiring Full Stack Engineer | Portfolio",
   description:
-    "IT Undergraduate | Full Stack Developer | Blockchain Enthusiast | Volunteer in Tech",
+    "IT Undergraduate | Aspiring Full Stack Engineer | Tech Enthusiast | Volunteer in Tech",
 };
 
 export default function RootLayout({

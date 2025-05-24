@@ -20,7 +20,7 @@ const Education = () => {
           </span>
         </>
       ),
-      timePeriod: "2023 - Present",
+      timePeriod: "2022 - Present",
     },
     {
       id: 2,
