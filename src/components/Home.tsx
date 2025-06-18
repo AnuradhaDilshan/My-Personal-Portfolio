@@ -39,8 +39,8 @@ const Home = () => {
               opacity: 0,
             }}
           >
-            Full Stack Developer <span className="text-xl"> | </span> Tech
-            Enthusiast
+            Aspiring Full Stack Engineer <span className="text-xl"> | </span>
+            Tech Enthusiast
           </p>
 
           <p
@@ -56,7 +56,7 @@ const Home = () => {
           </p>
 
           <a
-            href="https://drive.google.com/file/d/1ycZEoOpmryWOEWclvlhCL1xSnWz50PZx/view?usp=sharing"
+            href="https://drive.google.com/file/d/1iwyIgx3CLOB0lQ3tKin94cCwuKjWkF1e/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-1 fade-in animation-delay-600"

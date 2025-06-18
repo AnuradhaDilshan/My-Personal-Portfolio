@@ -372,6 +372,10 @@ export const skills = [
     img: "/assets/technologies/react.svg",
   },
   {
+    title: "React Native",
+    img: "/assets/technologies/reactnative.svg",
+  },
+  {
     title: "Next.Js",
     img: "/assets/technologies/nextjs.svg",
   },
@@ -396,10 +400,6 @@ export const skills = [
     img: "/assets/technologies/firebase.svg",
   },
   {
-    title: "MySQL",
-    img: "/assets/technologies/mysql.svg",
-  },
-  {
     title: "HTML",
     img: "/assets/technologies/html-5.svg",
   },
@@ -420,12 +420,12 @@ export const skills = [
     img: "/assets/technologies/php.svg",
   },
   {
-    title: "Solidity",
-    img: "/assets/technologies/solidity.svg",
+    title: "MySQL",
+    img: "/assets/technologies/mysql.svg",
   },
   {
-    title: "Ethereum",
-    img: "/assets/technologies/ethereum.svg",
+    title: "Solidity",
+    img: "/assets/technologies/solidity.svg",
   },
   {
     title: "Git",
